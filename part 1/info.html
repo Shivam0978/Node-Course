@@ -1,3 +1,5 @@
+       npm ~ Node package Manager
+
 
                  THE FOLLOWING HAS BEEN RECEIVED WHILE browsing the localhost
 
@@ -32,3 +34,26 @@ POST~ to give some data
 host,connection,dnt,accept,cookies are all Headers [req.header]
 
 response is like an empty bag in which server sends the response of the given request
+
+                             //## How event loop works##\\
+
+eg. clicking on a button to give some output
+
+now hoga kya ki ye button click se jo bhi function hoga vo ek path follow karega
+<request> > <event listener>  > <event queue> > <event loop> > <event handler> > (after processing and completing task) </event loop> > </event queue> > <response>
+
+  request :- sbse pehle tm request krte ho kisi response ke liye (clicking)
+
+  event listener :- us request ko listen krta hai and prepare for respond 
+
+  event queue :- request yaha line by line arrange ho jati hai [ many requests at a time]
+
+  event loop:- apne priority ke hisab ke request ko workers (handlers) ke pass bhej deta hai and the task which do not need any time for processing use khud handle krta hai.
+
+  event handler :- vo sare request jisme database, files or need more time to complete vo perform krte hai.
+
+  then after completing the task it goes back to event loop and then to event queue from where user receive it as response
+
+
+
+  

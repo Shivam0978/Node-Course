@@ -108,7 +108,7 @@
 //       console.log(chunk); 
 //       body.push(chunk);   //adding chunks to body           
 //     });
-//     req.on('end',()=>{        // signal ki chunks aana ab band ho gye (alll chunks received)
+//     req.on('end',()=>{        // signal ki chunks aana ab band ho gye (all chunks received)
 //       const fullBody=Buffer.concat(body).toString();      // give the final data after combining all chunks in string form
 //       console.log(fullBody);
 //     })
@@ -223,7 +223,7 @@
 
 // }
 // );
-
+                              //***// 
 
 // const www = require('http');
 // const fs = require('fs');
@@ -303,7 +303,7 @@
 // );
 
 
-                  //#Using Modules\\
+                              //#Using Modules\\
 
 // here we separate the creating server part and listening part to another file "app.js" and exporting the requestHandler function to the file and run it to perform the same operation
 const fs = require('fs');
@@ -345,6 +345,7 @@ return res.end();
        const param = new URLSearchParams(fullBody);  
       const BodyObject = Object.fromEntries(param);  // param me se entry nikal kr use object bna dena
       console.log(BodyObject);
+        // writeFileSync blocks everything [see part3]
       fs.writeFileSync('user.txt' , JSON.stringify(BodyObject)); 
     }); 
 
