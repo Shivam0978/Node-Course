@@ -7,14 +7,16 @@
 /* start is a special command so it runs directly , if i have to run my own script then i need to write 'npm run script_name' eg. khul-ja */
 // package.json contains the metadata of the files
 
+// nodemon is used to update the server whenever it detect some change 
+
 const http = require('http');
 
 const server = http.createServer((req,res)=>{
   console.log(req);
 });
 
-const port = 3000;
+const port = 3001;
 server.listen(port,()=>{
-  console.log("server is running at http//:localhost:3000");
+  console.log("server is running at http//:localhost:3001");
 })
 
