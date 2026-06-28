@@ -1,0 +1,6 @@
+{"username":"shivamgupta2210","email":"testing@gmail.com","password":"6788"}
+
+{"username":"20254138.satyam","email":"fvgnhj@gmail.com","password":"566778"}
+
+{"username":"20254143.shivam","email":"","password":"378278"}
+{"username":"Shivam_Gupta","email":"fvgnhj@gmail.com","password":""}
