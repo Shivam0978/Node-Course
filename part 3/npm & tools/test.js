@@ -20,3 +20,10 @@ server.listen(port,()=>{
   console.log("server is running at http//:localhost:3001");
 })
 
+
+
+
+                         // to set up projects :- npm init
+                        // to install nodemon :- npm install nodemon --save
+                        // to install express :- npm install express --save
+                        // to run self made scripts (start is not self made) :- npm run ___
