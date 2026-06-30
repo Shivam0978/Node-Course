@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Home</title>
+  <link rel="stylesheet" href="/output.css">
 </head>
-<body>
+<body class="ml-2">
+  
   <header>
-  <h2>Register your home</h2>
+  <h2 class="font-bold text-red-800">Register your home</h2>
   </header>
   <main>
-   <form action="/host/add-home" method="POST">           
-<input type="text" placeholder="Enter your house name" name="House Name"><br><br>
-<input type="text" placeholder="Enter house address" name=" House Address"><br><br>
+   <form class="mt-3"action="/host/add-home" method="POST">           
+<input class=" text-sm" type="text" placeholder="Enter your house name" name="House Name"><br>
+<input class="mb-2 text-sm" type="text" placeholder="Enter house address" name=" House Address"><br>
 <input type="submit">
    </form>
   </main>

@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>home</title>
+  <!--but despite this css do not shows on the window because all the files of backend are not opened for chrome console if they , anyone can access the backend files and logic so for this we use another directory name public. -->
+
+  <!--<link rel="stylesheet" href="home.css">  --> <!--just add the name of css file in public-->
+  <link rel="stylesheet" href="/output.css">    <!--for tailwindcss-->
 </head>
 <body>
   <header>
-  <h2>Welcome to airbnb</h2>   
+  <h2 class="text-red-700 text-3xl text-center">Welcome to airbnb</h2>   
   </header>         
     <main>
-  <a href ="/host/add-home">Add home</a>
+  <a href ="/host/add-home" class="m-3">Add home</a>
   </main>
 </body>
 </html>
