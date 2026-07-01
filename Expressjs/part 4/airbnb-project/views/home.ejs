@@ -1,0 +1,30 @@
+      
+                  <!-- ## Using partials ## -->
+
+  <!-- sometimes there are many things that are being repeated in codes. To reduce this we use partials  -->
+
+ <%- include('partials/body') %>     <!-- partials -->
+</head>
+<body>
+    <%- include('partials/nav') %>    <!-- partials -->
+    
+     <main class = "container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 font-semibold">
+  <h2 class=" text-3xl text-center">Welcome to airbnb</h2> 
+     </main>
+  <ul class=" list-inside space-y-2" >
+
+                          <!-- ## Using EJS ## -->
+
+    <!-- Ejs code (just write what to do with js in <% %>) -->
+     <% registerHomes.forEach(home =>{ %>  <!--from here html will start so %> should be necessary -->
+      <li >
+        <%= home['House Name'] %> 
+        <%= home['House Address'] %>
+      </li>
+
+    <% }) %>
+  </ul>
+    
+  
+</body>
+</html>

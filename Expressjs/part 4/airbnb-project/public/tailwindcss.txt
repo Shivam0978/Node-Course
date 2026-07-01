@@ -1,0 +1,17 @@
+ so for installing tailwind css
+ > npm init -y  
+ > npm install -D tailwindcss@3 postcss autoprefixer
+
+ for initialize tailwind css config
+
+ > npx tailwindcss init
+ in that tailwind.config.js, write "./views/*.html" in content 
+
+ create a input.css file in that folder (here,views)
+
+ change the path (href) of link tag in html pages to output.css
+
+ now in terminal write this :-
+ npx tailwindcss -i ./views/input.css -o ./public/output.css --watch
+
+ this means ~ -i for input (input file is in views/input.css) -o for output (its output is to be shown on public/output.css)
