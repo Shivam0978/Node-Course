@@ -1,5 +1,49 @@
 
+//                    //## Dynamic UI using EJS ## \\
 
+// const path = require('path');             
+// const express = require('express');
+// const hostRouter = express.Router();
+// const rootDir = require('../utils/pathUtil');
+
+// hostRouter.get("/add-home",(req,res,next)=>{                   
+
+//   res.sendFile(path.join(rootDir,'views','AddHome.html')); 
+// });
+
+//  const registerHomes = []; 
+//   // jis array ko point kr rha vo change nhi ho skta (const) but us array ke andar elements change ho kste hai
+
+// hostRouter.post("/add-home",(req,res,next)=>{         
+  
+//  console.log('Home is successfully registered for: ',req.body);
+
+//   // House Name and House Address dono object bana kr registerHomes me push kr diya
+//                                       //CASE 1 using camel case and space
+
+// //  registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body['House Address']});
+// //   res.sendFile(path.join(rootDir,'views','register.html'));
+
+//                                     // using Hyphen or space we extract it like this
+
+// //  registerHomes.push({'House Name' : req.body['House-Name']} , {'House Address' : req.body['House-Address']});
+// //   res.sendFile(path.join(rootDir,'views','register.html'));
+
+// registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body.HouseAddress});
+//   res.sendFile(path.join(rootDir,'views','register.html'));
+
+
+
+// });
+// // here we are exporting to things so we need to specifiy wherever we are importing the module
+
+// exports.hostRouter = hostRouter;
+// exports.registerHomes = registerHomes;
+
+
+
+                       //## Using EJS ## \\
+                   
 const path = require('path');             
 const express = require('express');
 const hostRouter = express.Router();
@@ -7,12 +51,22 @@ const rootDir = require('../utils/pathUtil');
 
 hostRouter.get("/add-home",(req,res,next)=>{                   
 
-  res.sendFile(path.join(rootDir,'views','AddHome.html'));  // basically tmhe bass itna hi krna hai iski chinta nhi krni ki file kis folder me hai kaise address dena hai just write rootDir and folder and file name which is to be extract.
+  res.sendFile(path.join(rootDir,'views','AddHome.html')); 
 });
 
-hostRouter.post("/add-home",(req,res,next)=>{                
- console.log(req.body);
+ const registerHomes = []; 
+  
+
+hostRouter.post("/add-home",(req,res,next)=>{         
+  
+ console.log('Home is successfully registered for: ',req.body);
+
+registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body.HouseAddress});
   res.sendFile(path.join(rootDir,'views','register.html'));
+
+
+
 });
 
-module.exports = hostRouter;
+exports.hostRouter = hostRouter;
+exports.registerHomes = registerHomes;
