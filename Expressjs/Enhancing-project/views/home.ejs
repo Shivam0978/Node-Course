@@ -1,0 +1,38 @@
+      
+                  <!-- ## Using partials ## -->
+
+  <!-- sometimes there are many things that are being repeated in codes. To reduce this we use partials  -->
+
+ <%- include('partials/body') %>     <!-- partials -->
+</head>
+<body>
+    <%- include('partials/nav') %>    <!-- partials -->
+
+     <main class = "container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 font-semibold">
+  <h2 class=" text-3xl text-center">Welcome to airbnb</h2> 
+     </main>
+  <div class="mx-auto mt-10 grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
+
+                          <!-- ## Using EJS ## -->
+
+    <!-- Ejs code (just write what to do with js in <% %>) -->
+     <% registerHomes.forEach(home =>{ %>  <!--from here html will start so %> should be necessary -->
+      <div class="overflow-hidden rounded-1.5xl border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-2xl">
+        <img src="<%= home['photo URL'] %>" alt="<%= home['House Name'] %>" class="h-48 w-full object-cover" />
+        <div class="space-y-2 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-lg font-bold text-gray-900"><%= home['House Name'] %></h3>
+            <span class="rounded-lg bg-yellow-400 px-2 py-1 text-sm text-white">★ 4.9</span>
+          </div>
+          <p class="text-sm text-gray-500"><%= home.City %></p>
+          <p class="text-sm text-gray-600"><%= home['House Address'] %></p>
+          <p class="pt-2 text-m font-bold text-red-500">₹<%= home.price %> / night</p>
+        </div>
+      </div>
+
+    <% }) %>
+  </div>
+    
+  
+</body>
+</html>
