@@ -38,7 +38,7 @@ userRouter.get("/",(req,res,next)=>{
 
  // res.render('home',{registerHomes}); 
              //OR
-  res.render('home',{registerHomes : registerHomes});
+  res.render('home',{registerHomes : registerHomes , pageTitle: 'Home' , currentPage: 'home'});
 
 })  
 module.exports = userRouter;

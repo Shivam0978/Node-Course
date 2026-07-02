@@ -51,7 +51,7 @@ const rootDir = require('../utils/pathUtil');
 
 hostRouter.get("/add-home",(req,res,next)=>{                   
 
-  res.sendFile(path.join(rootDir,'views','AddHome.html')); 
+  res.render('AddHome',{pageTitle: 'Add Home',currentPage:'add-home'}) ;
 });
 
  const registerHomes = []; 
@@ -61,8 +61,17 @@ hostRouter.post("/add-home",(req,res,next)=>{
   
  console.log('Home is successfully registered for: ',req.body);
 
-registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body.HouseAddress});
-  res.sendFile(path.join(rootDir,'views','register.html'));
+ // structive way of getting different data of same card
+const newHome = {
+   'House Name': req.body.HouseName,
+   'House Address': req.body.HouseAddress,
+   price: req.body.price,
+   City: req.body.City,
+   'photo URL': req.body.photoURL
+};
+
+registerHomes.push(newHome);
+res.render('register', {pageTitle: 'Registration',currentPage:'register'});
 
 
 

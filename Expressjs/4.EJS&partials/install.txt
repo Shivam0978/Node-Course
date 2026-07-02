@@ -1,0 +1,1 @@
+install nodemon , express , tailwind , init -y

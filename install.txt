@@ -1,0 +1,7 @@
+npm init -y   :-for creating projects
+npm install express 
+npm install nodemon
+ 
+ [tailwind]
+
+npm install --save ejs

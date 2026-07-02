@@ -1,6 +1,6 @@
  so for installing tailwind css
  > npm init -y  
- > npm install -D tailwindcss postcss autoprefixer
+ > npm install -D tailwindcss@3 postcss autoprefixer
 
  for initialize tailwind css config
 
