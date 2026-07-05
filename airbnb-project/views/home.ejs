@@ -18,14 +18,14 @@
     <!-- Ejs code (just write what to do with js in <% %>) -->
      <% registerHomes.forEach(home =>{ %>  <!--from here html will start so %> should be necessary -->
       <div class="overflow-hidden rounded-1.5xl border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-2xl">
-        <img src="<%= home['photo URL'] %>" alt="<%= home['House Name'] %>" class="h-48 w-full object-cover" />
+        <img src="<%= home.photoURL %>" alt="<%= home.HouseName %>" class="h-48 w-full object-cover" />
         <div class="space-y-2 p-4">
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg font-bold text-gray-900"><%= home['House Name'] %></h3>
+            <h3 class="text-lg font-bold text-gray-900"><%= home.HouseName %></h3>
             <span class="rounded-lg bg-yellow-400 px-2 py-1 text-sm text-white">★ 4.9</span>
           </div>
           <p class="text-sm text-gray-500"><%= home.City %></p>
-          <p class="text-sm text-gray-600"><%= home['House Address'] %></p>
+          <p class="text-sm text-gray-600"><%= home.HouseAddress %></p>
           <p class="pt-2 text-m font-bold text-red-500">₹<%= home.price %> / night</p>
         </div>
       </div>

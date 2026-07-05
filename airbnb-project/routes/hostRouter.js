@@ -1,81 +1,48 @@
 
-//                    //## Dynamic UI using EJS ## \\
 
-// const path = require('path');             
+
+
+                       //## MVC ## \\
+                                
 // const express = require('express');
 // const hostRouter = express.Router();
 // const rootDir = require('../utils/pathUtil');
 
-// hostRouter.get("/add-home",(req,res,next)=>{                   
+// // importing home.js controller 
+// // const {getAddHome} = require('../controllers/home');
+//                   //OR
+//    const homesController = require("../controllers/home");
 
-//   res.sendFile(path.join(rootDir,'views','AddHome.html')); 
-// });
+// // using controller for get request 
 
-//  const registerHomes = []; 
-//   // jis array ko point kr rha vo change nhi ho skta (const) but us array ke andar elements change ho kste hai
+// hostRouter.get("/add-home", homesController.getAddHome);
 
-// hostRouter.post("/add-home",(req,res,next)=>{         
+ 
   
-//  console.log('Home is successfully registered for: ',req.body);
+// // using controller for post request
 
-//   // House Name and House Address dono object bana kr registerHomes me push kr diya
-//                                       //CASE 1 using camel case and space
-
-// //  registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body['House Address']});
-// //   res.sendFile(path.join(rootDir,'views','register.html'));
-
-//                                     // using Hyphen or space we extract it like this
-
-// //  registerHomes.push({'House Name' : req.body['House-Name']} , {'House Address' : req.body['House-Address']});
-// //   res.sendFile(path.join(rootDir,'views','register.html'));
-
-// registerHomes.push({'House Name' : req.body.HouseName} , {'House Address' : req.body.HouseAddress});
-//   res.sendFile(path.join(rootDir,'views','register.html'));
-
-
-
-// });
-// // here we are exporting to things so we need to specifiy wherever we are importing the module
+// hostRouter.post("/add-home",homesController.postHomeEntry);
 
 // exports.hostRouter = hostRouter;
-// exports.registerHomes = registerHomes;
 
-
-
-                       //## Using EJS ## \\
-                   
-const path = require('path');             
+                //## Adding Models\\
 const express = require('express');
 const hostRouter = express.Router();
 const rootDir = require('../utils/pathUtil');
 
-hostRouter.get("/add-home",(req,res,next)=>{                   
+// importing home.js controller 
+// const {getAddHome} = require('../controllers/home');
+                  //OR
+   const homesController = require("../controllers/home");
 
-  res.render('AddHome',{pageTitle: 'Add Home',currentPage:'add-home'}) ;
-});
+// using controller for get request 
 
- const registerHomes = []; 
+hostRouter.get("/add-home", homesController.getAddHome);
+
+ 
   
+// using controller for post request
 
-hostRouter.post("/add-home",(req,res,next)=>{         
-  
- console.log('Home is successfully registered for: ',req.body);
-
- // structive way of getting different data of same card
-const newHome = {
-   'House Name': req.body.HouseName,
-   'House Address': req.body.HouseAddress,
-   price: req.body.price,
-   City: req.body.City,
-   'photo URL': req.body.photoURL
-};
-
-registerHomes.push(newHome);
-res.render('register', {pageTitle: 'Registration',currentPage:'register'});
-
-
-
-});
+hostRouter.post("/add-home",homesController.postHomeEntry);
 
 exports.hostRouter = hostRouter;
-exports.registerHomes = registerHomes;
