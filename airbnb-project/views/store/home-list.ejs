@@ -3,14 +3,12 @@
 
   <!-- sometimes there are many things that are being repeated in codes. To reduce this we use partials  -->
 
- <%- include('partials/body') %>     <!-- partials -->
+ <%- include('../partials/body') %>     <!-- partials -->
 </head>
-<body>
-    <%- include('partials/nav') %>    <!-- partials -->
+<body class="ml-2 mr-2">
+    <%- include('../partials/nav') %>    <!-- partials -->
 
-     <main class = "container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 font-semibold">
-  <h2 class=" text-3xl text-center">Welcome to airbnb</h2> 
-     </main>
+  
   <div class="mx-auto mt-10 grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
 
                           <!-- ## Using EJS ## -->
@@ -21,12 +19,16 @@
         <img src="<%= home.photoURL %>" alt="<%= home.HouseName %>" class="h-48 w-full object-cover" />
         <div class="space-y-2 p-4">
           <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg font-bold text-gray-900"><%= home.HouseName %></h3>
+            <h3 class="text-lg font-bold text-gray-900 line-clamp-2"><%= home.HouseName %></h3>
+          </div>
+          
+          <p class="text-sm text-gray-500 line-clamp-1"><%= home.City %></p>
+          <p class="text-sm text-gray-600 line-clamp-2"><%= home.HouseAddress %></p>
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-m font-bold text-red-500">₹<%= home.price %> / night</p>
             <span class="rounded-lg bg-yellow-400 px-2 py-1 text-sm text-white">★ 4.9</span>
           </div>
-          <p class="text-sm text-gray-500"><%= home.City %></p>
-          <p class="text-sm text-gray-600"><%= home.HouseAddress %></p>
-          <p class="pt-2 text-m font-bold text-red-500">₹<%= home.price %> / night</p>
+          <button class="mt-3 inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-red-900">Book</button>
         </div>
       </div>
 

@@ -1,0 +1,39 @@
+<%- include('../partials/body') %>
+
+</head>
+
+<body class="ml-2 mr-2">
+    <%- include('../partials/nav') %>    <!-- partials -->
+
+   <main class = "container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 font-semibold">
+  <h2 class=" text-3xl text-center text-red-700"> Hey host! here are your home list</h2> 
+     </main>
+
+  <div class="mx-auto mt-10 grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
+
+     <% registerHomes.forEach(home =>{ %>  
+
+      <div class="overflow-hidden rounded-1.5xl border border-gray-200 bg-white shadow-md transition duration-300 hover:shadow-2xl">
+        <img src="<%= home.photoURL %>" alt="<%= home.HouseName %>" class="h-48 w-full object-cover" />
+        <div class="space-y-2 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3 class="text-lg font-bold text-gray-900 line-clamp-2"><%= home.HouseName %></h3>
+          </div>
+          
+          <p class="text-sm text-gray-500 line-clamp-1"><%= home.City %></p>
+          <p class="text-sm text-gray-600 line-clamp-2"><%= home.HouseAddress %></p>
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-m font-bold text-red-500">₹<%= home.price %> / night</p>
+            <span class="rounded-lg bg-yellow-400 px-2 py-1 text-sm text-white">★ 4.9</span>
+          </div>
+          <button class="mt-3 inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-1 focus:ring-red-900">Edit</button>
+           <button class="mt-3 inline-flex items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-red-900">Delete</button>
+        </div>
+      </div>
+
+    <% }) %>
+  </div>
+    
+  
+</body>
+</html>
