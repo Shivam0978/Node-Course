@@ -1,3 +1,7 @@
+
+                     //## Adding Home detail ##\\
+
+
 const Home = require('../models/home');
 
 exports.getBookings = (req,res,next)=>{
@@ -15,9 +19,31 @@ exports.getIndex =(req,res,next)=>{
 
 }
 
+exports.getHomeDetail = (req,res,next)=>{
+
+    // homeId ki value const homeId me store krne ke liye (params express ka ek object hai jo URL ke dynamic part ko store krta hai)
+   const homeId = req.params.homeId;
+   console.log("At home details page", homeId);
+
+   //  Home.fetchAll((homes) => {
+   //    const selectedHome = homes.find((home) => home.id === homeId);
+
+   //    if (!selectedHome) {
+   //       return res.status(404).render('404',{pageTitle: 'page not found', currentPage: '404'});
+   //    }
+
+      res.render('store/home-details', {
+         pageTitle: 'Home Detail',
+         currentPage: 'home',
+         home: selectedHome
+      });
+   }
+
+
+
 exports.getHomes = (req,res,next)=>{      
   
- // yaha Home class ke fetchAll method ko call kiya hai aur usme ek callback function pass kiya hai jisme registerHomes ko render kiya hai
+
    Home.fetchAll((registerHomes)=>
     res.render('store/home-list',
       {registerHomes : registerHomes , 

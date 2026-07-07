@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "HouseName": "shivam villa",
     "HouseAddress": "section 345 apartment 707 , Delhi",
     "City": "buxar",
@@ -7,59 +8,35 @@
     "photoURL": "https://s.yimg.com/fz/api/res/1.2/kN173RYKSgQQYaDx4gLB6g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/ea/03/61/ea0361f5f8eda32478de93debe7d937d.jpg"
   },
   {
-    "HouseName": "Subham tent house",
-    "HouseAddress": "section 345 apartment 707 , Delhi",
-    "City": "Sikkim",
-    "price": "7000",
-    "photoURL": "https://tse2.mm.bing.net/th/id/OIP.yXcIJPlLmW1_Eb61moPctwHaE8?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "radhika apartment",
-    "HouseAddress": "section 345 apartment 707 , Delhi",
-    "City": "buxar",
-    "price": "8000",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.eSFx-5XbTKfqrwPx3vRfZwHaEc?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "radhika apartment",
-    "HouseAddress": "Indore ,MP",
-    "City": "Sikkim",
-    "price": "8000",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.iPeh7yH73HzG16Ao_2gelwHaE8?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "ffdg",
-    "HouseAddress": "420 street , Gola ghar ke samne, Darjeeling",
-    "City": "Mumbai",
-    "price": "6008",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.eSFx-5XbTKfqrwPx3vRfZwHaEc?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "Radhika apartment & houses Villa",
-    "HouseAddress": "section 345 apartment 707 , street 56, floor 56,near tilak,Delhi",
-    "City": "Mumbai",
-    "price": "6000",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.eSFx-5XbTKfqrwPx3vRfZwHaEc?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "shivam villa",
-    "HouseAddress": "section 345 apartment 707 , Delhi",
-    "City": "mumbai",
-    "price": "8000",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.eSFx-5XbTKfqrwPx3vRfZwHaEc?pid=Api&h=220&P=0"
-  },
-  {
-    "HouseName": "radhika apartment",
-    "HouseAddress": "bangalore,India",
-    "City": "Mumbai",
-    "price": "7000",
-    "photoURL": "https://tse1.mm.bing.net/th/id/OIP.iPeh7yH73HzG16Ao_2gelwHaE8?pid=Api&h=220&P=0"
-  },
-  {
+    "id": "2",
     "HouseName": "shivam villa",
     "HouseAddress": "bangalore,India",
     "City": "mumbai",
     "price": "",
     "photoURL": ""
+  },
+  {
+    "HouseName": "radhika apartment",
+    "HouseAddress": "section 345 apartment 707 , street 56, floor 56,near tilak,Delhi",
+    "City": "Sikkim",
+    "price": "5050",
+    "photoURL": "https://tse2.mm.bing.net/th/id/OIP.yXcIJPlLmW1_Eb61moPctwHaE8?pid=Api&h=220&P=0",
+    "id": "0.9589054380870767"
+  },
+  {
+    "HouseName": "ffdg",
+    "HouseAddress": "Section 345 apartment 707 , Delhi",
+    "City": "mumbai",
+    "price": "7089",
+    "photoURL": "https://s.yimg.com/fz/api/res/1.2/kN173RYKSgQQYaDx4gLB6g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/ea/03/61/ea0361f5f8eda32478de93debe7d937d.jpg",
+    "id": "0.10205786697739605"
+  },
+  {
+    "HouseName": "radhika apartment",
+    "HouseAddress": "Section 345 apartment 707 , Delhi",
+    "City": "buxar",
+    "price": "8000",
+    "photoURL": "https://tse2.mm.bing.net/th/id/OIP.yXcIJPlLmW1_Eb61moPctwHaE8?pid=Api&h=220&P=0",
+    "id": "0.3221773250211013"
   }
 ]

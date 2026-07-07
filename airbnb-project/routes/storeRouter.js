@@ -1,6 +1,5 @@
- 
-                          //## MVC ##\\
 
+                   //##Adding Home detail##\\
  
  const storeController = require("../controllers/storeController");
 
@@ -12,12 +11,11 @@ const rootDir = require('../utils/pathUtil');
 // changing address for registerHomes 
 const {registerHomes} = require ('../controllers/hostController')
 
-storeRouter.get("/store/",storeController.getIndex)
+storeRouter.get("/", storeController.getIndex);
 
-storeRouter.get("/store/booking",storeController.getBookings)
- // using controllers [MVC]
-storeRouter.get("/store/home-list",storeController.getHomes)  
-
-storeRouter.get("/store/favourite-list",storeController.getFavourite)
+storeRouter.get("/booking", storeController.getBookings);
+storeRouter.get("/home-list", storeController.getHomes);
+storeRouter.get("/home-list/:homeId", storeController.getHomeDetail);
+storeRouter.get("/favourite-list", storeController.getFavourite);
 
 module.exports = storeRouter;

@@ -1,22 +1,24 @@
-
+        //## adding home detail ##\\
+        // some lines are written by Ai due to an internal problem in console
 
 const errorController = require("./controllers/error");
 const express = require('express');
 const app = express();
 
 
-app.set('view engine' , 'ejs');
-app.set('views' , 'views')   
 const path = require('path');
+const rootDir = require('./utils/pathUtil');
+
+app.set('view engine' , 'ejs');
+app.set('views' , path.join(rootDir, 'views'));
 
 // local module
 const storeRouter = require("./routes/storeRouter");  
   
 const {hostRouter} = require('./routes/hostRouter');
-const rootDir = require('./utils/pathUtil'); 
            
 app.use((req,res,next)=>{
-  console.log(req.url,req.method); 
+  console.log(req.url,req.method);
   next();
 })
          
@@ -24,7 +26,7 @@ app.use(express.urlencoded());
 
 app.use(express.static(path.join(rootDir,'public'))); 
 
-  app.use(storeRouter);     
+  app.use("/store",storeRouter);     
 
   app.use("/host",hostRouter);          
 
