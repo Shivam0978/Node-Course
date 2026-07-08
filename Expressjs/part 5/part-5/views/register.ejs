@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Home</title>
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body class="ml-2">
+  <header >
+  <h2 class="text-green-500">✅Registration successful!!</h2>
+  </header>
+    <a href="/" class="ml-10 " > go to home </a>
+</body>
+</html> -->
+
+                      <!-- ## Creating Partials ## -->
+
+
+<%- include('partials/body') %>                  
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-2xl rounded-2xl p-10 max-w-md w-full text-center">
+
+        <!-- Success Icon -->
+        <div class="text-6xl mb-4">
+            ✅
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-4xl font-bold text-green-500 mb-4">
+            Registration Successful!!!
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 mb-8">
+            Your home has been successfully registered.
+        </p>
+
+        <!-- Button -->
+        <a href="/"
+           class="inline-block bg-green-500 hover:bg-green-600
+                  text-white font-semibold
+                  py-3 px-8 rounded-lg
+                  transition duration-300 shadow-md">
+            Go To Home
+        </a>
+
+    </div>
+
+</body>
+</html>

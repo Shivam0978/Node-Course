@@ -13,7 +13,7 @@
     "HouseAddress": "bangalore,India",
     "City": "mumbai",
     "price": "",
-    "photoURL": ""
+    "photoURL": "/images/house1.jpg"
   },
   {
     "HouseName": "radhika apartment",
@@ -24,19 +24,13 @@
     "id": "0.9589054380870767"
   },
   {
-    "HouseName": "ffdg",
-    "HouseAddress": "Section 345 apartment 707 , Delhi",
-    "City": "mumbai",
-    "price": "7089",
-    "photoURL": "https://s.yimg.com/fz/api/res/1.2/kN173RYKSgQQYaDx4gLB6g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/ea/03/61/ea0361f5f8eda32478de93debe7d937d.jpg",
-    "id": "0.10205786697739605"
-  },
-  {
-    "HouseName": "radhika apartment",
-    "HouseAddress": "Section 345 apartment 707 , Delhi",
-    "City": "buxar",
-    "price": "8000",
+    "HouseName": "Radhika apartment & houses Villa",
+    "HouseAddress": "section 345 apartment 707 , Delhi",
+    "City": "Mumbai",
+    "price": "8989",
     "photoURL": "https://tse2.mm.bing.net/th/id/OIP.yXcIJPlLmW1_Eb61moPctwHaE8?pid=Api&h=220&P=0",
-    "id": "0.3221773250211013"
+    "contact": "78797867668",
+    "description": "A listing description is the written portion of a real estate ad that highlights a home’s key features and selling points. It appears alongside photos on sites like Zillow and Realtor.com, and it’s often a buyer’s first impression of the property — only second to photos. A well-written description can grab attention, spark interest, help the home sell faster, and even help it sell for more money. Writing a good home listing description means more than just listing facts. It's about creating a story that helps buyers imagine themselves living there. That means using strong visuals, specific details, and a friendly, engaging tone. In this guide, we'll walk you through how to format a great property description, offer tips to help you write your own, and share both strong and weak examples to help you get a better idea. Want expert help writing your listing description? That’s where a top real estate agent comes in. Agents know what local buyers are looking for and can craft a home description that gets resul", 
+    "id": "0.9345633514151488"
   }
 ]

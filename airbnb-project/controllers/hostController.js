@@ -29,7 +29,10 @@ exports.postHomeEntry = (req,res,next)=>{
    req.body.HouseAddress,
    req.body.price,
    req.body.City,
-   req.body.photoURL
+   req.body.photoURL,
+   req.body.description,
+   req.body.contact,
+  
  );
  newHome.save();
  
