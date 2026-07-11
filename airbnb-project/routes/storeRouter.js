@@ -17,6 +17,8 @@ storeRouter.get("/", storeController.getIndex);
 // main file ki link controller me hoti hai jaha se render krte ho
 storeRouter.get("/booking", storeController.getBookings);
 storeRouter.get("/home-list", storeController.getHomes);
+
+// yaha :homeId ka mtlb ek dynamic parameter hai and sare dynamic parameter req.params ke object ho jate h so they can be accessible using req.params.name
 storeRouter.get("/home-list/:homeId", storeController.getHomeDetail);
 storeRouter.get("/favourite-list", storeController.getFavourite);
 // adding post request for favourite page

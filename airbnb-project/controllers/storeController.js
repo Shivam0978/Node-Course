@@ -154,17 +154,27 @@ exports.getFavourite = (req,res,next)=>{
       */
       /*
        now yaha filter:Array me se sirf wahi elements rakhna jo condition satisfy karein.
+       yaha registerHomes fetchAll ke callback ka parameter hai means it has the same data
        
        */
       const favouriteHomes = registerHomes.filter(home =>
-
+         /* ab dhyan se sun mere bhai 
+         so yaha you can confuse 
+          registerHomes.filter(home => favourites.includes(home.Id)
+          so yaha filter registerHomes ke liye use hua hai jaise Home.fetchAll but yaha filter registerhomes me likha hua nhi hai its a inbuilt function but you can assume ki likha h so filter bhi callback return krta hai same class or array etc ka jispe bhi use ho rha ho so like filter(callback) where callback(registerHomes) ab filter me home hai so by callback rule home = registerHomes thus home.Id = registerHomes.Id 
+          now favourites contains the data of all homes from which the filter identify which is equal to home.Id and include it
+          */
            favourites.includes(home.Id)
       );
       // const favouriteHomes = registerHomes.filter(home =>{
       //    return favourites.includes(home.Id)
       // });
       
-   res.render('store/favourite-list',{pageTitle: 'My Favourites',currentPage:'favourite'}) ;
+   res.render('store/favourite-list', {
+      favouriteHomes: favouriteHomes,
+      pageTitle: 'My Favourites',
+      currentPage: 'favourite'
+   });
    });
  
     });
@@ -173,14 +183,18 @@ exports.getFavourite = (req,res,next)=>{
 exports.postAddtoFavourite = (req,res,next)=>{
    console.log("Came to add to favourite", req.body);
 
-   // yaha id req.body.id hai and error is the callback
-
+   // yaha Id req.body.Id hai and error is the callback
+   // kyuki function me do variables pass hui hai
+  
+   /* to yaha error callback hai and AddtoFavourite me jaha jaha callback call kiya gya hai vaha pura error function call hoga
+   */
    Favourite.AddtoFavourite(req.body.Id , error=>{
+      // if error then show else redirect
       if(error){
       console.log("Error while Adding to Favourite",error)
       }
         res.redirect("/store/favourite-list");
-   })
+   });
  
 }
 
@@ -191,7 +205,7 @@ exports.getIndex =(req,res,next)=>{
 
 exports.getHomeDetail = (req,res,next)=>{
 
-   // "'req.params' object ke andar jo homeId property hai, uski value nikal kar homeId naam ke variable mein store kar do.  eg /homes/6  so req.params = { homeId: "5" }
+   // "'req.params' ke andar jo homeId property hai, uski value nikal kar homeId naam ke variable mein store kar do.  eg /homes/6  so req.params = { homeId: "5" } so req.params.homeId = '5'
    
    const homeId = req.params.homeId;
    console.log("At home details page", homeId);
@@ -217,6 +231,7 @@ exports.getHomeDetail = (req,res,next)=>{
 
 exports.getHomes = (req,res,next)=>{      
   
+   // so yaha Home.fetchAll((registerHomes) , Homes class me static function fetchAll hai which reads the file and write and give callback here as registerHomes and  {registerHomes : registerHomes  yaha tm vo data bhi render krwa rhe ho
 
    Home.fetchAll((registerHomes)=>
     res.render('store/home-list',
@@ -224,7 +239,6 @@ exports.getHomes = (req,res,next)=>{
         pageTitle: 'Home List' ,
          currentPage: 'home'}));
  
-
 }
 
 

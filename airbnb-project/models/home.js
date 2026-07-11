@@ -85,8 +85,8 @@ module.exports = class Home {
   }
   // it is also a method runs when we write Home.save()
   save() {
-    //giving random id
-    this.id = Math.random().toString();
+    //giving random Id
+    this.Id = Math.random().toString();
     
     // fetchAll function dekho and Home.fetchAll means it is defined in Home as static
     // now yaha homes file se jo data parsed hue hai vo hai
@@ -135,11 +135,11 @@ module.exports = class Home {
   static findById(homeId,callback){
     // pehle mere pass sare ghar ki list aa jayegi and then usme se jo id wala ghr chahiye vo extract ho jayega
    
-    // homes me jitne bhi houses honge fetchAll unhe le aayega yaha this is for Home class
+    // homes me jitne bhi houses honge fetchAll unhe le aayega this is for Home class
     this.fetchAll(homes =>{
       // yha find ek ek krke home me id find krega which is equal to the id given and jo home match hoga use return kr dega 
-      // find(home (ek function hai) => home.id (this.id which has been saved in home)=== homeId (parameter passed in the function)) 
-      const homeFound = homes.find(home => home.id === homeId);
+      // now yaha find(callback) ye use hua h so pehle to fetchAll ne homes me sare data store kr diye now find function is same as filter so it also return a calklback in which the callback has same value as in homes so home.Id = homes.Id 
+      const homeFound = homes.find(home => home.Id === homeId);
       //callback is not a special keyword, its just a variable storing a function
       /*
       callback use kiya jata hai jb ye function kisi aur file ya function me use kiya ja rha ho and iska output mujhe us function ya file me chahiye. yaha if callback (homeFound) nhi hota to function apna output baahar ke kisi file ya method ko nhi de pata 

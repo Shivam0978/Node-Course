@@ -24,7 +24,7 @@ module.exports = class Favourite {
 // includes check whether the id is present or not
 /* check GetFavourite
 now yaha fav me us file location me jitne data hai vo parsed hai (as in the GetFavourite function)
-*/
+*/     // yaha includes(Id) direct use kr skte hai kyuki filter ka to use nhi kr rhe and Id favourites ka obj hai
       if (favourites.includes(Id)){
         
       //  console.log("Home is already marked favourite");
@@ -34,6 +34,8 @@ now yaha fav me us file location me jitne data hai vo parsed hai (as in the GetF
       else{
         favourites.push(Id);
         // if data nhi hai then push it in the file path as string and after all this done , call callback
+        /* now yaha writeFile ke andar callback kya kr rha? so writeFile bhi ek asynchronous function hai so it take time and Agar callback na ho to tumhe kaise pata chalega ki file save hui ya nahi and isiliye callback me constroller me error hai so if koi error aaye to console me show kr de
+        */
         fs.writeFile(FavouriteDataPath , JSON.stringify(favourites) , callback);
       }
 
