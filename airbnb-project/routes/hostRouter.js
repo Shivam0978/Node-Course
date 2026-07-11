@@ -14,12 +14,17 @@ const rootDir = require('../utils/pathUtil');
 
 hostRouter.get("/add-home", hostController.getAddHome);
 
- 
+hostRouter.get("/edit-home" , hostController.getEditing);
+
+// adding host router for particular home editing page here query parameter alag alag time pr alag alag aa skti hai so they are not the part of the path
+hostRouter.get("/edit-home/:homeId", hostController.getEditHome);
   
 // using controller for post request
+hostRouter.post("/edit-home",hostController.postEditHome)
 
 hostRouter.post("/add-home",hostController.postHomeEntry);
 
-hostRouter.get("/host-home-list",hostController.getHostHomes)
+
+hostRouter.get("/host-homes-list",hostController.getHostHomes)
 
 exports.hostRouter = hostRouter;
