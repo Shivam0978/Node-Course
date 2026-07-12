@@ -198,6 +198,21 @@ exports.postAddtoFavourite = (req,res,next)=>{
  
 }
 
+exports.postRemoveFromFavourite = (req,res,next)=>{
+   
+   // route defines the param as :homeId, so use the same name (case-sensitive)
+   const homeId = req.params.homeId;
+   console.log("came to delete page", homeId);
+   Favourite.deleteById(homeId,error=>{
+      if(error){
+         console.log("Error while deleting from favourite",error);
+
+      }
+       res.redirect("/store/favourite-list");
+   })
+  
+}
+
 exports.getIndex =(req,res,next)=>{
    res.render('store/',{pageTitle: 'Airbnb',currentPage:'airbnb'}) ;
 

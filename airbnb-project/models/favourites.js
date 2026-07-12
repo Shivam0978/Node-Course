@@ -62,5 +62,14 @@ now yaha fav me us file location me jitne data hai vo parsed hai (as in the GetF
       callback(!err ? JSON.parse(data):[]);
     });
   }
+
+               // same with explanation in home.js
+  static deleteById(delHomeId ,callback) {
+
+        Favourite.GetFavourite(homeIds=>{   
+          homeIds = homeIds.filter(home =>delHomeId !== home);  
+          fs.writeFile(FavouriteDataPath,JSON.stringify(homeIds),callback);
+        })
+    }
       
 };

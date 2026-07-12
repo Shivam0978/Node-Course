@@ -23,5 +23,6 @@ storeRouter.get("/home-list/:homeId", storeController.getHomeDetail);
 storeRouter.get("/favourite-list", storeController.getFavourite);
 // adding post request for favourite page
 storeRouter.post("/favourite-list", storeController.postAddtoFavourite);
+storeRouter.post("/delete/:homeId", storeController.postRemoveFromFavourite);
 
 module.exports = storeRouter;

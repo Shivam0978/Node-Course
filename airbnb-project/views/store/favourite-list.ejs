@@ -31,6 +31,10 @@
            <div class="mt-4 flex items-center ">
            
             <a class="inline-flex items-center justify-center rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-800 focus:outline-none focus:ring-1 focus:ring-green-900" href="/store/home-list/<%= home.Id %>">Detail</a>
+
+            <form action ="/store/delete/<%=home.Id %>" method="POST">
+            <button type="submit" class="ml-2 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-800 focus:outline-none focus:ring-1 focus:ring-red-900">Remove</button>
+            </form>
            </div>
            <!-- making different path -->
         </div>

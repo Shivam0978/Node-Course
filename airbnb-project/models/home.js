@@ -158,6 +158,7 @@
 const fs = require('fs');
 const path = require('path');
 const rootDir = require('../utils/pathUtil');
+const Favourite = require('./favourites');
 
 
  const homeDataPath = path.join(rootDir, 'data', 'homes.json');
@@ -258,7 +259,10 @@ module.exports = class Home {
         // so when we click on delete for a particular id then that Id will be removed and so the house will too
         // now ab remaining data ko fir se homes.json me likhe rhe and after that callback is passed 
         // REMEMBER yaha callback(homes) nhi likha hai ki callback me homes ka data pass hoga yha callback execute ho rha i.e callback ki jagah koi bhi function hoga vo execute hoga
+        
         fs.writeFile(homeDataPath,JSON.stringify(homes),callback);
+        // so that favourite me se bhi vo id delete ho jaye
+       
       })
   }
 };

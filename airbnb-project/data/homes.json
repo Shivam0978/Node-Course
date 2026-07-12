@@ -1,32 +1,12 @@
 [
   {
-    "HouseName": "Subham tent house",
-    "HouseAddress": "section 345 apartment 707 , Delhi",
-    "City": "Buxar",
-    "price": "6000",
+    "HouseName": "radhika apartment",
+    "HouseAddress": "bangalore,India",
+    "City": "Mumbai",
+    "price": "7000",
     "photoURL": "https://tse2.mm.bing.net/th/id/OIP.yXcIJPlLmW1_Eb61moPctwHaE8?pid=Api&h=220&P=0",
     "contact": "78797867668",
     "description": "A listing description is the written portion of a real estate ad that highlights a home’s key features and selling points. It appears alongside photos on sites like Zillow and Realtor.com, and it’s often a buyer’s first impression of the property — only second to photos. A well-written description can grab attention, spark interest, help the home sell faster, and even help it sell for more money.  Writing a good home listing description means more than just listing facts. It's about creating a story that helps buyers imagine themselves living there. That means using strong visuals, specific details, and a friendly, engaging tone.  In this guide, we'll walk you through how to format a great property description, offer tips to help you write your own, and share both strong and weak examples to help you get a better idea.  Want expert help writing your listing description? That’s where a top real estate agent comes in. Agents know what local buyers are looking for and can craft a home description that gets resul",
-    "Id": "0.10600655812238902"
-  },
-  {
-    "HouseName": "Shubham Mansion",
-    "HouseAddress": "section 345 apartment 707 , Delhi",
-    "City": "Mumbai",
-    "price": "5000",
-    "photoURL": "https://s.yimg.com/fz/api/res/1.2/kN173RYKSgQQYaDx4gLB6g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/ea/03/61/ea0361f5f8eda32478de93debe7d937d.jpg",
-    "contact": "78797867668",
-    "description": "A listing description is the written portion of a real estate ad that highlights a home’s key features and selling points. It appears alongside photos on sites like Zillow and Realtor.com, and it’s often a buyer’s first impression of the property — only second to photos. A well-written description can grab attention, spark interest, help the home sell faster, and even help it sell for more money.  Writing a good home listing description means more than just listing facts. It's about creating a story that helps buyers imagine themselves living there. That means using strong visuals, specific details, and a friendly, engaging tone.  In this guide, we'll walk you through how to format a great property description, offer tips to help you write your own, and share both strong and weak examples to help you get a better idea.  Want expert help writing your listing description? That’s where a top real estate agent comes in. Agents know what local buyers are looking for and can craft a home description that gets resul",
-    "Id": "0.15846555259846917"
-  },
-  {
-    "HouseName": "shivam villa",
-    "HouseAddress": "bangalore,India",
-    "City": "dubai",
-    "price": "8000",
-    "photoURL": "https://s.yimg.com/fz/api/res/1.2/kN173RYKSgQQYaDx4gLB6g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/ea/03/61/ea0361f5f8eda32478de93debe7d937d.jpg",
-    "contact": "78797867668",
-    "description": "",
-    "Id": "0.8930802220978687"
+    "Id": "0.4504552174502209"
   }
 ]
