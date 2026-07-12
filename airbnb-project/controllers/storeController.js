@@ -210,6 +210,8 @@ exports.getHomeDetail = (req,res,next)=>{
    const homeId = req.params.homeId;
    console.log("At home details page", homeId);
    // yaha homedetail extract krenge by using findById
+   // yaha Favourite.GetFavourite(favourites pass kiye hai taaki favourite.ejs me jo js ka code hai usme favourite define ho
+   Favourite.GetFavourite(favourites =>{
    Home.findById(homeId,home =>{
       // if home is not present
       if(!home){
@@ -221,23 +223,28 @@ exports.getHomeDetail = (req,res,next)=>{
    // jb ghar ki detail mil jayegi tb page render krenge 
       res.render('store/home-details', {
          home: home,  // rendering home-detail page with home data
+         favourites:favourites,
          pageTitle: 'Home Detail',
          currentPage: 'home',
          })
       }
          
       });
+   })
    }
 
 exports.getHomes = (req,res,next)=>{      
   
    // so yaha Home.fetchAll((registerHomes) , Homes class me static function fetchAll hai which reads the file and write and give callback here as registerHomes and  {registerHomes : registerHomes  yaha tm vo data bhi render krwa rhe ho
-
+ Favourite.GetFavourite(favourites=>{
    Home.fetchAll((registerHomes)=>
     res.render('store/home-list',
+
       {registerHomes : registerHomes , 
+         favourites:favourites,
         pageTitle: 'Home List' ,
          currentPage: 'home'}));
+      })
  
 }
 

@@ -248,6 +248,19 @@ module.exports = class Home {
     })
 
   }
+  static deleteById(homeId ,callback) {
+
+     // fetching the data of all homes using fetchAll method
+      this.fetchAll(homes=>{
+        // if deleteById me jo homeId hai usse home ki koi bhi Id match ho jati hai to use delete kr dena hai else kuch nhi krna
+        homes = homes.filter(home =>home.Id !== homeId);
+        // yha filter homes me filter kr rha like jis home ki id match nhi ho rhi use homes me hi rakho else ko hata do
+        // so when we click on delete for a particular id then that Id will be removed and so the house will too
+        // now ab remaining data ko fir se homes.json me likhe rhe and after that callback is passed 
+        // REMEMBER yaha callback(homes) nhi likha hai ki callback me homes ka data pass hoga yha callback execute ho rha i.e callback ki jagah koi bhi function hoga vo execute hoga
+        fs.writeFile(homeDataPath,JSON.stringify(homes),callback);
+      })
+  }
 };
 
 

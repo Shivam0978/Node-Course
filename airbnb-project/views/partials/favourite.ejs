@@ -1,11 +1,13 @@
  
  
  <form action="/store/favourite-list" method="POST">
-                  <button type="submit" class="flex h-11 w-11 items-center justify-center rounded-full border border-red-200 bg-white text-3xl text-red-500 shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 hover:text-white">
+                  <button type="submit" class="flex h-11 w-11 items-center justify-center rounded-full border border-red-200 bg-white text-3xl text-red-500 shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 hover:text-white
+                <%= favourites.some(fav => fav.Id === home.Id) ? 'bg-red-500 text-white' : 'bg-white text-red-500' %>"
+                  >
                     ♡
                   </button>
                   <!-- adding hiden input for sending homeId to favpurite page -->
                    <input type="hidden" name="Id" value="<%= home.Id %>">
                </form>
 
-               
+              

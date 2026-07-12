@@ -120,3 +120,17 @@ exports.postEditHome = (req,res,next)=>{
  
  res.redirect('/host/host-homes-list');
 }
+
+exports.postDeleteHome = (req,res,next)=>{
+ // obtaining homeId from url to homeId variable
+  const homeId = req.params.homeId;
+  console.log("came to delete page",homeId)
+  // now we have to delete and redirect to host-homes-list
+  Home.deleteById(homeId,error=>{
+    if (error){
+      console.log('Error while deleting ',error);
+    }
+     res.redirect("/host/host-homes-list");
+  })
+ 
+}
