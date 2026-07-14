@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Home</title>
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body class="ml-2 mr-2">
+  
+   <%- include('../partials/nav') %>     <!-- partials -->
+
+  <main class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-md">
+
+    <h2 class="text-3xl font-bold mb-8 text-center text-red-600">
+       <!-- Edit Your Home  -->
+        <!-- if same file (home and edit) then ~~ -->
+         <!-- now yaha editing agar true hai to "Edit Your Home" else "Register Your Home" -->
+         <%= editing ? "Edit Your Home": "Register Your Home" %>
+    </h2>
+
+      <!-- just in case if your use single page for rendering two things -->
+    <form
+   
+        action="/host/<%= editing ? 'edit-home' : 'add-home'%>"
+
+        method="POST"
+        class="max-w-md mx-auto flex flex-col items-center gap-5"
+    >
+    <!-- here as the two pages are different action="/host/edit-home is also correct" -->
+<!--       
+    yaha sare inputs me value de rhe in which editing flag ko use kr rhe , as the page is different we can write them direct also like value="<%= home.HouseName %>" but just for practice if the same page has to render two diff UI -->
+
+    <!-- ab dekho yaha hame sare inputs me value show ho rhi hai and when we click on save then sare inputs ka data post request ke form me edit-home pr ja bhi rha (you can see in network after  inspect) but hame home ka id chahiye and thus  -->
+     <!-- since we dont want to make it editable we use type as hidden but now id too go as data to edit-home  -->
+     <input type="hidden" name="Id" value="<%= editing ? home.Id : ''%>"/>
+
+        <input
+            class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+            type="text"
+            value = "<%= editing ? home.HouseName : '' %>"
+            placeholder="Enter your house name"
+            name="HouseName"
+        >
+
+        <input
+            class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+            type="text"
+             value = "<%= editing ? home.HouseAddress : '' %>"
+            placeholder="Enter Location"
+            name="HouseAddress"
+        >
+
+        <input class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+        type="number" 
+         value = "<%= editing ? home.price : '' %>"
+        name="price" 
+        placeholder="Price Per Night">
+
+        <input class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+         type="text"
+          value = "<%= editing ? home.City : '' %>"
+        name="City"
+        placeholder="Enter City">
+
+         <input class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+         type="text"
+          value = "<%= editing ? home.photoURL : '' %>"
+        name="photoURL"
+        placeholder="Enter photo URL">
+
+        <input class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+         type="text"
+          value = "<%= editing ? home.contact : '' %>"
+        name="contact"
+        placeholder="Phone number">
+
+        <textarea class="w-full px-4 py-3 border rounded-md
+                   focus:outline-none focus:ring-2 focus:ring-red-500"
+          
+        name="description"
+        placeholder="Enter Description"><%= editing ? home.description : '' %></textarea>
+
+        <!-- here value="Save"is also correct -->
+         <!-- if editing is true write Save else Submit -->
+        <input
+            type="submit"
+            value="<%= editing ? 'Save' : 'Submit' %>"
+            class="w-full bg-red-500 text-white
+                   py-3 rounded-md font-semibold
+                   hover:bg-red-600 transition duration-300
+                   cursor-pointer"
+        >
+
+    </form>
+
+</main>
+</body>
+</html> 
+
+
+

@@ -1,0 +1,73 @@
+
+
+
+                            <!-- Adding Favourite feature -->
+
+
+  <%- include('../partials/body') %>
+
+</head>
+
+<body class="ml-2 mr-2">
+  <%- include('../partials/nav') %>
+
+  
+     <main class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 max-w-6xl">
+      <button class="font-bold h-7 w-7 "><a  href="/store/home-list">🠄</a></button>
+               
+          <h2 class="text-3xl text-black font-bold text-center mb-6">
+              Details of <%= home.HouseName %>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="rounded-lg overflow-hidden">
+                  <img src="<%= home.photoURL %>" alt="<%= home.HouseName %>" class="w-full h-96 object-cover">   
+              </div>
+              <div class="flex justify-center mt-4">
+
+                 <%- include('../partials/favourite',{
+                    home:home,
+                    favourites:favourites
+                }) %>                                                           
+              </div> 
+
+              </div>
+              
+              <div class="space-y-6">
+                  <div class="border-b pb-4">
+                      <h3 class="text-2xl font-semibold text-red-500 mb-2">Description</h3>
+                      <p class="text-gray-600"><%= home.description %></p>
+                  </div>
+
+                  <div class="border-b pb-4">
+                      <h3 class="text-2xl font-semibold text-red-500  mb-2">Location</h3>
+                      <p class="text-gray-600"><%= home.HouseAddress %></p>
+                  </div>
+                  
+                  <div class="border-b pb-4">
+                      <h3 class="text-2xl font-semibold text-red-500  mb-2">Price</h3>
+                      <p class="text-green-600 text-xl font-bold">₹<%= home.price %> / night</p>
+                  </div>
+
+                  <div class="border-b pb-4">
+                      <h3 class="text-2xl font-semibold text-red-500 mb-2">Contact</h3>
+                      <p class="text-gray-600"><%= home.contact %></p>
+                  </div>
+
+                  <div class="border-b pb-4">
+                      <h3 class="text-2xl font-semibold text-red-500  mb-2">Rating</h3>
+                      <div class="flex items-center">
+                          <span class="text-yellow-400 text-xl">★</span>
+                          <span class="ml-2 text-lg"><%= home.rating %> 4.9/ 5</span>
+                      </div>
+                  
+                  </div>
+                 
+              </div>
+          </div>
+         
+      </main>
+</body>
+
+</html>
+ 
